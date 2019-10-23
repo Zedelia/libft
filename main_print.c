@@ -1,4 +1,10 @@
 #include "libft.h"
+# include <stdlib.h>
+# include <stdio.h>
+# include <unistd.h>
+# include <fcntl.h>
+# include <string.h>
+# include <ctype.h>
 
 int        main(int argc, char **argv)
 {
@@ -18,21 +24,24 @@ int        main(int argc, char **argv)
 
 	int fd;
 	char *string = "I am a genius !";
-	printf("we're going to use the string [%s] followed by [-]\nDo not forget to argv 'file'\n\n", string);
+	printf("we're going to use the string [%s] followed by [- \\n]\nDo not forget to argv 'file'\n\n", string);
 	
     fd = open(argv[1], O_RDWR);
     if (fd == -1)
 		return (0);
     ft_putchar_fd(string[0], fd);
 	ft_putchar_fd('-', fd);
+	ft_putchar_fd('\n', fd);
 
 	// PUTNBR_FD
 	ft_putnbr_fd(42, fd);
 	ft_putchar_fd('-', fd);
-     
+	ft_putchar_fd('\n', fd);
+
 	// PUTSTR_FD
 	ft_putstr_fd(string, fd);
 	ft_putchar_fd('-', fd);
+	ft_putchar_fd('\n', fd);
     
 	// PUTENDL_FD
 	ft_putendl_fd(string, fd);

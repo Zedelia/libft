@@ -8,88 +8,175 @@
 
 int        main(void)
 {
-	const char *str;
-//	char s[30] = "123456";
-//  char dest[30] = "abcdef";
 
-    char s2[30] = "123456";
-//    char dest2[30] = "abcdef";
+	char dest[40];
 
-/*
-//	int i = 0;
-// Memmove
-	printf("\n>> MEMMOVE \nsrc = %s\ndest = %s\n",s2, dest2);
-	printf("%s\n", ft_memmove((dest2), s2, 3));
-	printf("TEMOIN :\n%s\n", memmove(dest, s, 3));
-	printf("\n>> MEMMOVE \nsrc = NULL\ndest = NULL\n");
-	printf("%s\n",ft_memmove(((void *)0), ((void *)0), 5));
-*/
-
-	char *pouet = "z";
-	char *lolzer = (char *)&pouet[2];
-	lolzer = "aaaaaaaaaa";
-	str = ft_memchr(pouet, 'a', 50);
-	if (!str)
-		printf("NULL");
-	else
-		printf("\n%s\n",str);
+// MEMMOVE------------------------------
+	printf("\n--------------------->> MeMMOVE <<---------------------\n\n");
 	
+	printf("[everybody do the swap] | [          ](10) | 3\n");
+	printf("[%s]\n", ft_memmove(dest, "everybody do the swap", 3));
+	printf("[%s] - T\n\n\n", memmove(dest, "everybody do the swap", 3));
+	
+	ft_bzero(dest, 40);
+	printf("[everybody do the swap] | [           ] | 30 \n");
+	printf("[%s]\n",ft_memmove(dest, "everybody do the swap", 30));
+	printf("[%s] - T\n\n\n", memmove(dest, "everybody do the swap", 30));
 
-// Memchr
-	printf("\n>> MEMCHR \nsrc = %s\n",s2);
-	printf("%s\n", ft_memchr(s2, '4', 9));
-	printf("TEMOIN :\n%s\n", memchr(s2, '4', 9));
-/*
-ß
-// Memset
-	printf("\n>> MEMSET \ns : %s\n'a' - 3\n",s);
-	printf("%s\n",ft_memset(s, 'a', 3));
-	printf("TEMOIN :\n%s\n",memset(s2, 'a', 3));
+	ft_bzero(dest, 40);
+	printf("[everybody do the swap] | [           ] | 0 \n");
+	printf("[%s]\n",ft_memmove(dest, "everybody do the swap", 0));
+	printf("[%s] - T\n\n\n", memmove(dest, "everybody do the swap", 0));
 
-// Memccpy
-	printf("\n>> MEMcCPY \nsrc = %s\ndest = %s\n'4' - 5\n",s, dest);
-	printf("%s\n", ft_memccpy(dest, s, '4', 4));
-	printf("TEMOIN :\n%s\n", memccpy(dest2, s2, '4', 4));
+	printf("0 | 0 | 3\n");
+	printf("[%s]\n",ft_memmove(0, 0, 3));
+	printf("[%s] - T\n", memmove(0, 0, 3));
 
-// Memcpy
-	printf("\n>> MEMCPY \nsrc = %s\ndest = %s\n",s, dest);
-	printf(">%s\n", ft_memcpy("NULL", "NULL", 0));
-	printf("\nsrc2 = %s\ndest2 = %s\n6\n",s2, dest2);
-	printf("TEMOIN :\n%s\n", memcpy("NULL", "NULL", 0));
+// MEMCHR------------------------------
+	printf("\n--------------------->> MEMCHR <<---------------------\n\n");
 
-// Memcmp
-	printf("\n>> MEMCMP \nsrc = %s\ndest = %s\n6\n",s, dest);
-	printf("%d\n", ft_memcmp(dest, s, 3));
-	printf("TEMOIN :\n%d\n", memcmp(dest2, s2, 3));
+	printf("[c'est quand que tu vas mettre des paillettes dans ma vie kevin ?!] | [p] | 100\n");
+	printf("[%s]\n", ft_memchr("c'est quand que tu vas mettre des paillettes dans ma vie kevin ?!", 'p', 100));
+	printf("[%s] - T\n\n\n", memchr("c'est quand que tu vas mettre des paillettes dans ma vie kevin ?!", 'p', 100));;
 
-// Bzero
-	printf("\n>>BZERO \n%s\n",s);
-	ft_bzero(s, 3);
-	while (i < 6)
+	printf("[c'est quand que tu vas mettre des paillettes dans ma vie kevin ?!] | [p] | 35\n");
+	printf("[%s]\n", ft_memchr("c'est quand que tu vas mettre des paillettes dans ma vie kevin ?!", 'p', 35));
+	printf("[%s] - T\n\n\n", memchr("c'est quand que tu vas mettre des paillettes dans ma vie kevin ?!", 'p', 35));;
+
+	printf("[c'est quand que tu vas mettre des paillettes dans ma vie kevin ?!] | [p] | 34\n");
+	printf("[%s]\n", ft_memchr("c'est quand que tu vas mettre des paillettes dans ma vie kevin ?!", 'p', 34));
+	printf("[%s] - T\n\n\n", memchr("c'est quand que tu vas mettre des paillettes dans ma vie kevin ?!", 'p', 34));;
+
+	printf("[c'est quand que tu vas mettre des paillettes dans ma vie kevin ?!] | [x] | 50\n");
+	printf("[%s]\n", ft_memchr("c'est quand que tu vas mettre des paillettes dans ma vie kevin ?!", 'x', 50));
+	printf("[%s] - T\n\n\n", memchr("c'est quand que tu vas mettre des paillettes dans ma vie kevin ?!", 'x', 50));;
+
+	printf("[c'est quand que tu vas mettre des paillettes dans ma vie kevin ?!] | [p] | 10\n");
+	printf("[%s]\n", ft_memchr("c'est quand que tu vas mettre des paillettes dans ma vie kevin ?!", 'p', 10));
+	printf("[%s] - T\n\n\n", memchr("c'est quand que tu vas mettre des paillettes dans ma vie kevin ?!", 'p', 10));;
+
+
+// MEMSET------------------------------
+	printf("\n--------------------->> MEMSET<<---------------------\n\n");
+
+	ft_bzero(dest, 40);
+	printf("[%s] | [a] | 3 \n", dest);
+	printf("[%s]\n",ft_memset(dest, 'a', 3));
+	printf("[%s]\n\n\n", memset(dest, 'a', 3));
+
+	ft_bzero(dest, 40);
+	printf("[%s] | [a] | 40 \n", dest);
+	printf("[%s]\n",ft_memset(dest, 'a', 40));
+	printf("[%s]\n\n\n", memset(dest, 'a', 40));
+
+	printf("[%s] | [-] | 0 \n", dest);
+	printf("[%s]\n",ft_memset(dest, '-', 0));
+	printf("[%s]\n\n\n", memset(dest, '-', 0));
+
+	printf("[%s] | [\\0] | 10 \n", dest);
+	printf("[%s]\n",ft_memset(dest, '\0', 10));
+	printf("[%s]\n\n\n", memset(dest, '\0', 10));
+
+// MEMCCPY------------------------------
+	printf("\n--------------------->> MEM C CPY<<---------------------\n\n");
+
+	printf("[mangez des pommes] | [o] - 5\n");
+	printf("[%s]\n", ft_memccpy(dest, "mangez des pommes", 'o', 5));
+	printf("[%s] - T\n\n\n", memccpy(dest, "mangez des pommes", 'o', 5));
+
+	printf("[mangez des pommes] | [o] - 20\n");
+	printf("[%s]\n", ft_memccpy(dest, "mangez des pommes", 'o', 20));
+	printf("[%s] - T\n\n\n", memccpy(dest, "mangez des pommes", 'o', 20));
+
+	printf("[mangez des pommes] | [m] - 20\n");
+	printf("[%s]\n", ft_memccpy(dest, "mangez des pommes", 'm', 20));
+	printf("[%s] - T\n\n\n", memccpy(dest, "mangez des pommes", 'm', 20));
+
+	printf("[mangez des pommes--------------------------------------] | [\\0] - 40\n");
+	printf("[%s]\n", ft_memccpy(dest, "mangez des pommes                                           ", 0, 40));
+	printf("[%s] - T\n\n\n", memccpy(dest, "mangez des pommes                                           ", 0, 40));
+
+// MEMCCPY------------------------------
+	printf("\n--------------------->> MEMCPY<<---------------------\n\n");
+
+	ft_bzero(dest, 40);
+	printf("[mangez des pommes] | [%s] - 20\n", dest);
+	printf("[%s]\n", ft_memcpy(dest, "mangez des pommes",  20));
+	printf("[%s] - T\n\n\n", memcpy(dest, "mangez des pommes",  20));
+
+	printf("[----------------] | [%s] - 2\n", dest);
+	printf("[%s]\n", ft_memcpy(dest, "-----------------",  2));
+	printf("[%s] - T\n\n\n", memcpy(dest, "-----------------",  2));
+
+	printf("[----------------] | [%s] - 0\n", dest);
+	printf("[%s]\n", ft_memcpy(dest, "-----------------",  0));
+	printf("[%s] - T\n\n\n", memcpy(dest, "-----------------",  0));
+
+	printf("[\\0] | [%s] - 0\n", dest);
+	printf("[%s]\n", ft_memcpy(dest, 0,  0));
+	printf("[%s] - T\n\n\n", memcpy(dest, 0,  0));
+
+	printf("[&H20] | [%s] - 20\n", dest);
+	printf("[%s]\n", ft_memcpy(dest, "&H20", 20));
+	printf("[%s] - T\n\n\n", memcpy(dest, "&H20",  20));
+
+
+// MEMCCPY------------------------------
+	printf("\n--------------------->> MEMCMP<<---------------------\n\n");
+
+	printf("[&H20] | [%s] - 20\n", dest);
+	printf("[%d]\n", ft_memcmp(dest, "&H20", 20));
+	printf("[%d] - T\n\n\n", memcmp(dest, "&H20",  20));
+
+	ft_bzero(dest, 40);
+	printf("[&H20] | [%s] - 20\n", dest);
+	printf("[%d]\n", ft_memcmp(dest, "&H20", 20));
+	printf("[%d] - T\n\n\n", memcmp(dest, "&H20",  20));
+
+	ft_memcpy(dest, "&H20", 20);
+	printf("[*******] | [%s] - 5\n", dest);
+	printf("[%d]\n", ft_memcmp(dest, "*******", 5));
+	printf("[%d] - T\n\n\n", memcmp(dest, "*******", 5));
+
+	printf("[&H5O] | [%s] - 1\n", dest);
+	printf("[%d]\n", ft_memcmp(dest, "&H5O", 1));
+	printf("[%d] - T\n\n\n", memcmp(dest, "&H5O", 1));
+
+
+// BZERO------------------------------
+	printf("\n--------------------->> BEZERO <<---------------------\n\n");
+	
+	int i = 0;
+	printf("[%s] | 2\n",dest);
+	ft_bzero(dest, 2);
+	while (i < 4)
 	{
-		printf("%c",s[i]); 
+		printf("[%c]\n",dest[i]); 
 		i++;
 	}
-	printf("\n");
-	bzero(s2, 3);
+	printf("\n\n\n");
+
+	memcpy(dest, "---------------------------------",  20);
+	printf("[%s] | 10 \n",dest);
+	bzero(dest, 10);
 	i = 0;
-	while (i < 6)
+	while (i < 20)
 	{
-		printf("%c",s[i]); 
+		printf("[%c]\n",dest[i]); 
 		i++;
 	}
 
-
-	CALLOOOOOOOOOOOOC
+// CALLOC------------------------------
+	printf("\n--------------------->> CALLOC <<---------------------\n\n");
 	
-    (void)argc;
-    // This pointer will hold the 
+      // This pointer will hold the 
     // base address of the block created 
     int* ptr; 
-    int n, i = 0; 
+    int n = 0;
+	i = 0; 
   
     // Get the number of elements for the array 
-    n = atoi(argv[1]); 
+    n = 30; 
     printf("Enter number of elements: %d\n", n); 
   
     // Dynamically allocate memory using calloc() 
@@ -119,11 +206,7 @@ int        main(void)
 		{ 
 			printf("%d, ", ptr[i]); 
 		} 
+	printf("\n\n\n");
 	}
     return 0; 
 } 
-
-	return(0);
-
-*/
-}

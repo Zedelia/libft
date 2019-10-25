@@ -126,7 +126,18 @@ int        main(void)
         printf("[%s]\n------------\n", ft_strtrim("   \t  \n\n \t\t  \n\n\nHello \t  Please\n Trim me !\n   \n \n \t\t\n  ", " \n\t"));
     else
         printf("This is a FAIL\n------------\n");
+
+	  printf("\n[] | [ ple]\n");
+    if ((ft_strtrim("", " ple")))
+    	printf("[%s] - Good job !\n\n", (ft_strtrim("", " ple")));
+    else
+        printf("This is a FAIL you should have returned an empty string\n------------\n");
     
+	printf("\n[ strim this chain ] | [\\0]\n");
+    if ((ft_strtrim(" strim this chain ", 0)))
+        printf("[%s]\n\n", (ft_strtrim(" strim this chain ", 0)));
+    else
+        printf("This is a FAIL, you should return the string src\n------------\n");
 
 
     // ITOA---------------------------------------------------------

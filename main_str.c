@@ -31,7 +31,7 @@ int        main(void)
 	printf("[%d] T \n\n\n", strncmp("fraise", "fraise-a-la-creme", 0));
 
 	printf(" '' | fraise-a-la-creme | 7\n");
-	printf("[%d]\n", ft_strncmp("", "t8stss", 7));
+	printf("[%d]\n", ft_strncmp("", "fraise-a-la-creme", 7));
 	printf("[%d] T \n\n\n", strncmp("", "fraise-a-la-creme", 7));
 
 	printf("fraise | '' | 7\n");

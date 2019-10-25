@@ -54,7 +54,7 @@ int        main(void)
 	printf("------\n");
 
 
-	ft_memdel((void **)split);
+	free(split);
 	printf("\ns   : [Ilovebanana]\nsep : [-]\n");
     split = ft_split("Ilovebanana", '-');
 	i = 0;

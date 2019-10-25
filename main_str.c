@@ -59,15 +59,21 @@ int        main(void)
 // STRlCAT--------------------------------------------------------
 	printf("\n--------------------->> STR l CAT <<---------------------\n\n");
 
+	char dest0[] = "";
+	char dest[] = "01234567890123456789";
 
-
-	printf("s = '           '  | dest = 'je suis un genie' | 12\n");
+	printf("''  | 'je suis un genie' | 12\n");
 	printf("[%zu]\n", ft_strlcat("                             ","je suis un genie", 12));
-	printf("[%zu] - T\n\n\n", strlcat("                             ","je suis un genie", 12)); 
+	printf("[%s]\n", dest0); 
+	printf("[%zu] - T\n", strlcat("                             ","je suis un genie", 12)); 
+	printf("[%s]\n\n\n", dest0); 
 
-	printf("s = '           '  | dest = 'je suis un genie' | 3\n");
-	printf("[%zu]\n", ft_strlcat("                             ","je suis un genie", 3));
-	printf("[%zu] - T\n\n\n", strlcat("                             ","je suis un genie", 3)); 
+
+	printf(" '01234567890123456789'  | '' | 10\n");
+	printf("[%zu]\n", ft_strlcat(dest, "", 10));
+	printf("[%s]\n", dest); 
+	printf("[%zu] - T\n", ft_strlcat(dest, "", 10));
+	printf("[%s]\n\n\n", dest); 
 
 
 
@@ -137,6 +143,7 @@ int        main(void)
 	char s2[] = "Great idea";
 
 
+
 	printf("[%s] | [%s] | 3\n", s1, s2);
 	printf("[%zu]\n", ft_strlcpy(s1, s2, 3));
 	printf("[%zu] - T\n\n\n", strlcpy(s1, s2, 3));
@@ -144,6 +151,8 @@ int        main(void)
 	printf("[%s] | [%s] | 28\n", s1_bis, s2);
 	printf("[%zu]\n", ft_strlcpy(s1_bis, s2, 28));
 	printf("[%zu] - T\n\n\n", strlcpy(s1_bis, s2, 28));
+
+
 
 
 // STRNSTR----------------------------------------------------

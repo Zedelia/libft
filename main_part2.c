@@ -21,7 +21,7 @@ int        main(void)
 // SUBSTR---------------------------------------------------------------
 	printf("\n--------------------->> SUBSTR <<---------------------\n");
 
-	printf("'I'm a libertarian witch ! ' | start: 5 | len: 12\n");
+	printf("'I'm a libertarian witch ! ' | start: 4 | len: 12\n");
 	printf("[%s]\n", ft_substr("I'm a libertarian witch ! ", 4, 12));
 	printf("[a libertarian] - T\n\n\n");
 

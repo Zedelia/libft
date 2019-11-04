@@ -6,12 +6,12 @@
 /*   By: mbos <mbos@student.le-101.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/14 08:14:30 by mbos         #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/22 16:22:40 by mbos        ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/04 10:01:29 by mbos        ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 void	ft_putstr(char const *s)
 {

@@ -6,12 +6,12 @@
 /*   By: mbos <mbos@student.le-101.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/13 18:29:31 by melodiebos   #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/17 18:43:13 by mbos        ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/04 10:01:29 by mbos        ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {

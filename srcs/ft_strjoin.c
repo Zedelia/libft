@@ -6,12 +6,12 @@
 /*   By: mbos <mbos@student.le-101.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/09 16:09:59 by mbos         #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/22 11:59:13 by mbos        ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/04 10:01:29 by mbos        ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

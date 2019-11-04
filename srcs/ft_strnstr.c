@@ -6,12 +6,12 @@
 /*   By: mbos <mbos@student.le-101.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/08 16:06:02 by mbos         #+#   ##    ##    #+#       */
-/*   Updated: 2019/10/16 16:23:59 by mbos        ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/04 10:01:29 by mbos        ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {

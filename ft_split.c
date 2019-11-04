@@ -1,0 +1,116 @@
+/* ************************************************************************** */
+/*                                                          LE - /            */
+/*                                                              /             */
+/*   ft_split.c                                       .::    .:/ .      .::   */
+/*                                                 +:+:+   +:    +:  +:+:+    */
+/*   By: mbos <mbos@student.le-101.fr>              +:+   +:    +:    +:+     */
+/*                                                 #+#   #+    #+    #+#      */
+/*   Created: 2019/10/10 09:29:00 by melodiebos   #+#   ##    ##    #+#       */
+/*   Updated: 2019/10/23 17:21:04 by mbos        ###    #+. /#+    ###.fr     */
+/*                                                         /                  */
+/*                                                        /                   */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+static char			**free_all_strs(char **tab_strs, int j)
+{
+	while (j > -1)
+	{
+		ft_memdel((void*)tab_strs[j]);
+		j--;
+	}
+	return (tab_strs = NULL);
+}
+
+static char			*cpy_str(char *str, int len)
+{
+	char	*cpy;
+
+	if (!(cpy = malloc(sizeof(char) * (len + 1))))
+		return (NULL);
+	if (len == 0)
+	{
+		cpy = NULL;
+		return (cpy);
+	}
+	cpy[len] = '\0';
+	while (len--)
+		cpy[len] = str[len];
+	return (cpy);
+}
+
+static char			**fill_tab_strs(char **tab_strs, char const *s, char c)
+{
+	int		i;
+	int		j;
+	int		start;
+
+	start = 0;
+	i = 0;
+	j = 0;
+	while (s[i])
+	{
+		while (s[i] && s[i] == c)
+			i++;
+		start = i;
+		while (s[i] && s[i] != c)
+			i++;
+		if (!((tab_strs[j] = cpy_str((char *)&s[start], i - start))))
+			return ((free_all_strs(tab_strs, j - 1)));
+		if (tab_strs[j])
+			j++;
+		while (s[i] && s[i] == c)
+			i++;
+	}
+	tab_strs[j] = NULL;
+	return (tab_strs);
+}
+
+static char			**create_tab_strs(char const *s, char c)
+{
+	int		i;
+	int		len;
+	char	**tab_strs;
+
+	i = 0;
+	len = 0;
+	while (s[i])
+	{
+		while (s[i] == c && s[i] != '\0')
+			i++;
+		if (s[i] != '\0')
+			len++;
+		while (s[i] != c && s[i] != '\0')
+			i++;
+	}
+	if (!(tab_strs = malloc(sizeof(char *) * (len + 1))))
+		return (tab_strs = NULL);
+	return (tab_strs);
+}
+
+char				**ft_split(char const *s, char c)
+{
+	char	**tab_strs;
+
+	tab_strs = NULL;
+	if (!s || !s[0])
+	{
+		if ((tab_strs = malloc(sizeof(char) * 1)))
+		{
+			tab_strs[0] = 0;
+			return (tab_strs);
+		}
+		return (tab_strs = NULL);
+	}
+	if (!(tab_strs = create_tab_strs(s, c)))
+		return ((tab_strs = NULL));
+	if (!(fill_tab_strs(tab_strs, s, c)))
+	{
+		ft_memdel((void*)tab_strs);
+		return (tab_strs);
+	}
+	if (tab_strs[0] == NULL)
+		ft_memdel((void*)tab_strs);
+	return (tab_strs);
+}

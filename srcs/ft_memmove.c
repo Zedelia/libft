@@ -6,12 +6,18 @@
 /*   By: mbos <mbos@student.le-101.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/08 10:01:38 by mbos         #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/04 10:01:29 by mbos        ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/08 16:59:28 by mbos        ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
+
+/*
+** The memmove() function copies len bytes from string src to string dst.
+** The two strings may overlap; the copy is always done in
+** a non-destructive manner.
+*/
 
 void	*ft_memmove(void *dest, const void *src, size_t len)
 {
@@ -20,12 +26,12 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	i = 0;
 	if (!dest || !src)
 		return (NULL);
-	if (((unsigned char *)src) < ((unsigned char *)dest))
+	if (src < dest)
 	{
 		while (len--)
 			((unsigned char *)dest)[len] = ((unsigned char *)src)[len];
 	}
-	else if (((unsigned char *)src) >= ((unsigned char *)dest))
+	else if (src >= dest)
 	{
 		while (i < len)
 		{
@@ -33,5 +39,5 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 			i++;
 		}
 	}
-	return ((void *)dest);
+	return (dest);
 }

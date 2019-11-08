@@ -6,12 +6,18 @@
 /*   By: mbos <mbos@student.le-101.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/10 09:29:00 by melodiebos   #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/04 10:01:29 by mbos        ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/08 18:20:50 by mbos        ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
+
+/*
+** Alloue (avec malloc(3)) et retourne un tableaude chaines de caracteres 
+** obtenu en séparant s à l’aide du caractère c, utilisé comme délimiteur.
+** Le tableau doit être terminé par NULL.
+*/
 
 static char			**free_all_strs(char **tab_strs, int j)
 {
@@ -29,7 +35,7 @@ static char			*cpy_str(char *str, int len)
 
 	if (!(cpy = malloc(sizeof(char) * (len + 1))))
 		return (NULL);
-	if (len == 0)
+	if (!len)
 	{
 		cpy = NULL;
 		return (cpy);

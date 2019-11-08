@@ -6,27 +6,33 @@
 /*   By: mbos <mbos@student.le-101.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/08 12:08:12 by mbos         #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/04 10:01:29 by mbos        ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/08 17:20:50 by mbos        ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
+/*
+** The strchr() function locates the first occurrence of c
+** (converted to a char) in the string pointed to by s.
+** The terminating null character is considered to be part of the string;
+** there fore if c is `\0', the functions locate the terminating `\0'.
+**
+** >> The strrchr() function is identical to strchr(), except it locates
+** the last occurrence of c.
+*/
+
 char	*ft_strrchr(const char *s, int c)
 {
-	unsigned int i;
+	int str_len;
 
-	i = 0;
-	if (s[i] == (char)c)
-		return ((char *)&s[i]);
-	while (s[i])
-		i++;
-	while (i > 0)
+	str_len = ft_strlen(s);
+	while (str_len >= 0)
 	{
-		if (s[i] == (char)c)
-			return ((char *)&s[i]);
-		i--;
+		if (s[str_len] == (char)c)
+			return ((char *)&s[str_len]);
+		str_len--;
 	}
 	return (NULL);
 }

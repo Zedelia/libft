@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "includes/libft.h"
 # include <stdlib.h>
 # include <stdio.h>
 # include <unistd.h>
@@ -134,8 +134,8 @@ int        main(void)
         printf("This is a FAIL you should have returned an empty string\n------------\n");
     
 	printf("\n[ strim this chain ] | [\\0]\n");
-    if ((ft_strtrim(" strim this chain ", 0)))
-        printf("[%s]\n\n", (ft_strtrim(" strim this chain ", 0)));
+    if ((ft_strtrim(" strim this chain ", "")))
+        printf("[%s]\n\n", (ft_strtrim(" strim this chain ", "")));
     else
         printf("This is a FAIL, you should return the string src\n------------\n");
 

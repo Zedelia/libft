@@ -6,12 +6,21 @@
 /*   By: mbos <mbos@student.le-101.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/08 12:59:04 by mbos         #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/04 10:01:29 by mbos        ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/08 17:23:22 by mbos        ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
+
+/*
+** The strcmp() and strncmp() functions lexicographically compare the
+** null-terminated strings s1 and s2.
+**
+** >> The strncmp() function compares not more than n characters.
+** Because strncmp() is designed for comparing strings rather than binary data,
+** characters that appear after a `\0' character are not compared.
+*/
 
 int		ft_strncmp(const char *s1, const char *s2, size_t n)
 {

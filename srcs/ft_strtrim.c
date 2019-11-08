@@ -6,12 +6,18 @@
 /*   By: mbos <mbos@student.le-101.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/10 08:41:48 by melodiebos   #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/04 10:01:29 by mbos        ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/08 18:22:18 by mbos        ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
+
+/*
+** Alloue (avec malloc(3)) et retourne une copie de lachaine de caractères 
+** donnée en argument, sans les caractères spécifiés dans le set donné en 
+** argumentau début et à la fin de la chaine de caractères.
+*/
 
 static char		*cpy_str(const char *s1, int i)
 {
@@ -49,19 +55,18 @@ char			*ft_strtrim(char const *s1, char const *set)
 	char	*cpy;
 	int		i;
 
-	if (s1 == NULL)
+	if (!s1)
 		return (NULL);
-	if (set == NULL || s1[0] == '\0')
+	if (!set || s1[0] == '\0')
 		return ((char*)s1);
-	while (is_set(*s1, set) && s1)
+	while (s1 && is_set(*s1, set))
 		s1++;
 	i = ft_strlen(s1) - 1;
 	while (is_set(s1[i], set) && i > 0)
 		i--;
 	if (i <= 0)
 	{
-		cpy = malloc(sizeof(char));
-		if (cpy == NULL)
+		if (!(cpy = malloc(sizeof(char))))
 			return (NULL);
 		cpy[0] = '\0';
 		return (cpy);

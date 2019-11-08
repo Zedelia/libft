@@ -6,12 +6,12 @@
 /*   By: mbos <mbos@student.le-101.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/23 17:51:56 by mbos         #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/08 18:33:31 by mbos        ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/08 18:41:50 by mbos        ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "includes/libft.h"
+#include "../includes/libft.h"
 # include <stdlib.h>
 # include <stdio.h>
 # include <unistd.h>

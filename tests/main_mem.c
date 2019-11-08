@@ -1,11 +1,10 @@
-#include "includes/libft.h"
+#include "../includes/libft.h"
 # include <stdlib.h>
 # include <stdio.h>
 # include <unistd.h>
 # include <fcntl.h>
 # include <string.h>
 # include <ctype.h>
-
 int        main(void)
 {
 

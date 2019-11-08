@@ -6,13 +6,13 @@ NAME_BASE = pbase
 NAME_STR = pstr
 NAME_LIST = plist
 
-MAIN_STR = main_str.c
-MAIN_ISTYPE = main_istype_to.c
-MAIN_MEM = main_mem.c
-MAIN_PRINT = main_print.c
-MAIN_MEMORY = main_memory.c
-MAIN_BASE = main_base.c
-MAIN_LIST = main_list.c
+MAIN_STR = tests/main_str.c
+MAIN_ISTYPE = tests/main_istype_to.c
+MAIN_MEM = tests/main_mem.c
+MAIN_PRINT = tests/main_print.c
+MAIN_MEMORY = tests/main_memory.c
+MAIN_BASE = tests/main_base.c
+MAIN_LIST = tests/main_list.c
 
 INCLUDES = libft
 
@@ -62,6 +62,7 @@ SRCS = ft_atoi \
 	ft_strlcat \
 	ft_strcpy \
 	ft_strlcpy \
+	ft_memdel \
 
 SRCS_BONUS = ft_lstnew_bonus \
 	ft_lstadd_front_bonus \
@@ -87,6 +88,7 @@ OBJ := ${SRCS:.c=.o}
 # -- 
 SRCS_BONUS := $(patsubst %,srcs/%.c,${SRCS_BONUS})
 OBJ_BONUS := ${SRCS:.c=.o} ${SRCS_BONUS:.c=.o}
+
 
 NAME_BONUS = libft_bonus
 		

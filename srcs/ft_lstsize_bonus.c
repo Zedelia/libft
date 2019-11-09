@@ -6,7 +6,7 @@
 /*   By: mbos <mbos@student.le-101.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/13 05:20:56 by melodiebos   #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/08 18:27:52 by mbos        ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/08 18:57:29 by mbos        ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -26,7 +26,7 @@ int	ft_lstsize(t_list *lst)
 	if (!lst)
 		return (size);
 	tmp = lst;
-	while (!tmp)
+	while (tmp)
 	{
 		size++;
 		tmp = tmp->next;

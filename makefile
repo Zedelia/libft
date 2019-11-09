@@ -72,6 +72,7 @@ SRCS_BONUS = ft_lstnew_bonus \
 	ft_lstdelone_bonus \
 	ft_lstiter_bonus \
 	ft_lstmap_bonus \
+	ft_lstclear_bonus \
 	
 INCLUDES := $(patsubst %,includes/%.h,${INCLUDES})
 

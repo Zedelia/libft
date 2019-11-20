@@ -76,6 +76,12 @@ SRCS_BONUS = ft_lstnew_bonus \
 	
 INCLUDES := $(patsubst %,includes/%.h,${INCLUDES})
 
+NO_COLOR = \x1b[0m
+OK_COLOR = \x1b[32;01m
+ERROR_COLOR = \x1b[31;01m
+WARN_COLOR = \x1b[33;01m
+_PURPLE = \x1b[35m
+
 # Same binary compiled multiple times after a modification when using this rule : 
 # to be tested : 
 #		replace $(patsubst %,srcs/%.c,${SRCS}) with $(patsubst %,srcs/%.c,${FILES})
@@ -102,10 +108,10 @@ ${NAME_BONUS}:${OBJ_BONUS}
 		ranlib ${NAME}
 		
 all : ${NAME}
-		@echo "\n>> La librairie Libft.a a bien ete cree." 
+		@echo "$(OK_COLOR)\n>> La librairie Libft.a a bien ete cree.\n$(NO_COLOR)" 
 
 bonus: ${NAME_BONUS}
-		@echo "\n>> La librairie Libft.a a bien ete mise a jour"
+		@echo "$(_PURPLE)\n>> La librairie Libft.a a bien ete mise a jour\n$(NO_COLOR)"
 
 
 ${NAME_STR}:${OBJ} ${MAIN_STR}

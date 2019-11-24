@@ -18,7 +18,7 @@ INCLUDES = libft
 
 NAME = libft.a
 
-CC = gcc 
+CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 DFLAGS = -g3 -fsanitize=address
 COMP := ${CC} ${CFLAGS} -I ${INCLUDES}
@@ -63,6 +63,7 @@ SRCS = ft_atoi \
 	ft_strcpy \
 	ft_strlcpy \
 	ft_memdel \
+	ft_isincharset
 
 SRCS_BONUS = ft_lstnew_bonus \
 	ft_lstadd_front_bonus \
@@ -73,7 +74,7 @@ SRCS_BONUS = ft_lstnew_bonus \
 	ft_lstiter_bonus \
 	ft_lstmap_bonus \
 	ft_lstclear_bonus \
-	
+
 INCLUDES := $(patsubst %,includes/%.h,${INCLUDES})
 
 NO_COLOR = \x1b[0m
@@ -82,23 +83,23 @@ ERROR_COLOR = \x1b[31;01m
 WARN_COLOR = \x1b[33;01m
 _PURPLE = \x1b[35m
 
-# Same binary compiled multiple times after a modification when using this rule : 
-# to be tested : 
+# Same binary compiled multiple times after a modification when using this rule :
+# to be tested :
 #		replace $(patsubst %,srcs/%.c,${SRCS}) with $(patsubst %,srcs/%.c,${FILES})
 #FILES = $(shell ls srcs | grep .c | cut -d "." -f 1)
-# -- 
+# --
 SRCS := $(patsubst %,srcs/%.c,${SRCS})
 OBJ := ${SRCS:.c=.o}
 
 # not using this rule because of issue above
 #FILES_BONUS = $(shell ls srcs/_bonus | grep .c | cut -d "." -f 1)
-# -- 
+# --
 SRCS_BONUS := $(patsubst %,srcs/%.c,${SRCS_BONUS})
 OBJ_BONUS := ${SRCS:.c=.o} ${SRCS_BONUS:.c=.o}
 
 
 NAME_BONUS = libft_bonus
-		
+
 ${NAME}: ${OBJ}
 		ar rc ${NAME} ${OBJ}
 		ranlib ${NAME}
@@ -106,9 +107,9 @@ ${NAME}: ${OBJ}
 ${NAME_BONUS}:${OBJ_BONUS}
 		ar rc ${NAME} ${OBJ_BONUS}
 		ranlib ${NAME}
-		
+
 all : ${NAME}
-		@echo "$(OK_COLOR)\n>> La librairie Libft.a a bien ete cree.\n$(NO_COLOR)" 
+		@echo "$(OK_COLOR)\n>> La librairie Libft.a a bien ete cree.\n$(NO_COLOR)"
 
 bonus: ${NAME_BONUS}
 		@echo "$(_PURPLE)\n>> La librairie Libft.a a bien ete mise a jour\n$(NO_COLOR)"
@@ -138,7 +139,7 @@ ${NAME_LIST}: ${OBJ_BONUS} ${MAIN_LIST}
 progs: ${NAME_STR} ${NAME_LIST} ${NAME_BASE} ${NAME_MEMORY} ${NAME_PRINT} ${NAME_MEM} ${NAME_ISTYPE}
 	@echo "\n>> Congrats ! You're a genius ! \nLes programmes ont bien ete crees"
 
-%.o : %.c $(INCLUDES) 
+%.o : %.c $(INCLUDES)
 	$(CC) $(CFLAGS) -I $(INCLUDES)  -c  -o $@ $<
 
 clean:

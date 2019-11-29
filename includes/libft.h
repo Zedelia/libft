@@ -6,7 +6,7 @@
 /*   By: mbos <marvin@le-101.fr>                    +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/11 16:06:31 by mbos         #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/27 11:18:56 by mbos        ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/11/29 17:04:30 by mbos        ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -67,6 +67,7 @@ char			*ft_strcpy(char *dest, const char *src);
 size_t			ft_strlcat(char *dest, const char *src, size_t size);
 char			*ft_strcat(char *dest, const char *src);
 char			*ft_strdup(const char *s1);
+char			*ft_strndup(const char *s1, size_t n);
 char			*ft_substr(char const *s, unsigned int start, size_t len);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
@@ -77,7 +78,7 @@ char			*ft_strnstr(const char *haystack,
 							const char *needle, size_t len);
 char			**ft_split(char const *s, char c);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-int		ft_isincharset(char c, char const *charset);
+int				ft_isincharset(char c, char const *charset);
 /*
 ** ---------------------------------- FT
 ** ---------------------------------- PUT

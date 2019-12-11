@@ -66,7 +66,11 @@ SRCS = ft_atoi \
 	ft_isincharset \
 	ft_strmove \
 	ft_strndup \
-	ft_utoa
+	ft_utoa \
+	ft_ltoabase \
+	ft_strsub \
+	ft_strncpy \
+	ft_strspn
 
 SRCS_BONUS = ft_lstnew_bonus \
 	ft_lstadd_front_bonus \

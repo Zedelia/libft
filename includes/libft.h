@@ -6,7 +6,7 @@
 /*   By: mbos <marvin@le-101.fr>                    +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/11 16:06:31 by mbos         #+#   ##    ##    #+#       */
-/*   Updated: 2019/12/11 14:52:41 by melodiebos  ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/12/11 20:08:48 by melodiebos  ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -20,6 +20,7 @@
 # include <fcntl.h>
 # include <string.h>
 # include <ctype.h>
+# include <limits.h>
 
 typedef struct	s_list
 {
@@ -79,6 +80,9 @@ char			*ft_strnstr(const char *haystack,
 char			**ft_split(char const *s, char c);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int				ft_isincharset(char c, char const *charset);
+size_t			ft_strspn(const char *s, const char *charset);
+char			*ft_strsub(char const *s, unsigned int start, size_t len);
+char			*ft_strncpy(char *dest, const char *src, size_t n);
 /*
 ** ---------------------------------- FT
 ** ---------------------------------- PUT
@@ -97,7 +101,8 @@ void			ft_putstr_fd(char *s, int fd);
 */
 int				ft_atoi(const char *str);
 char			*ft_itoa(int n);
-char			*ft_utoa(unsigned int nbr)
+char			*ft_utoa(unsigned int nbr);
+char			*ft_ltoabase(unsigned long long nbr, const char *base);
 /*
 ** ---------------------------------- FT
 ** ---------------------------------- LIST

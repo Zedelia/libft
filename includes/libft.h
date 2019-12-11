@@ -6,7 +6,7 @@
 /*   By: mbos <marvin@le-101.fr>                    +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/11 16:06:31 by mbos         #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/29 17:04:30 by mbos        ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/12/11 14:52:41 by melodiebos  ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -97,6 +97,7 @@ void			ft_putstr_fd(char *s, int fd);
 */
 int				ft_atoi(const char *str);
 char			*ft_itoa(int n);
+char			*ft_utoa(unsigned int nbr)
 /*
 ** ---------------------------------- FT
 ** ---------------------------------- LIST

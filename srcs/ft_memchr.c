@@ -15,7 +15,7 @@
 
 /*
 ** The memchr() function locates the first occurrence of c (converted to
-** an unsigned char) in string s.
+** an t_uchar) in string s.
 */
 
 void	*ft_memchr(const void *s, int c, size_t n)
@@ -27,7 +27,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		return (NULL);
 	while (i < n)
 	{
-		if (((unsigned char *)s)[i] == ((unsigned char)c))
+		if (((t_uchar *)s)[i] == ((t_uchar)c))
 			return ((void *)&s[i]);
 		i++;
 	}

@@ -21,5 +21,5 @@
 void	ft_bzero(void *s, size_t len)
 {
 	while (len--)
-		((unsigned char *)s)[len] = '\0';
+		((t_uchar *)s)[len] = '\0';
 }

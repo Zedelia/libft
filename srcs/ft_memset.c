@@ -15,7 +15,7 @@
 
 /*
 ** The memset() function writes len bytes of value c
-** (converted to an unsigned char) to the string b.
+** (converted to an t_uchar) to the string b.
 */
 
 void	*ft_memset(void *s, int c, size_t len)
@@ -23,6 +23,6 @@ void	*ft_memset(void *s, int c, size_t len)
 	if (!s || !len)
 		return (s);
 	while (len--)
-		((unsigned char *)s)[len] = c;
+		((t_uchar *)s)[len] = c;
 	return (s);
 }

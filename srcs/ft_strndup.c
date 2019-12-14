@@ -6,7 +6,7 @@
 /*   By: mbos <marvin@le-101.fr>                    +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/09 10:36:49 by mbos         #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/29 17:07:28 by mbos        ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/12/14 15:11:58 by melodiebos  ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -27,7 +27,7 @@ char	*ft_strndup(const char *s1, size_t n)
 	i = 0;
 	if (!(cpy = malloc((n + 1) * sizeof(char))))
 		return (NULL);
-	while (i < n)
+	while (s1 && s1[i] && i < n)
 	{
 		cpy[i] = s1[i];
 		i++;

@@ -26,6 +26,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t len)
 	if (dest == src || len == 0)
 		return (dest);
 	while (len--)
-		((unsigned char *)dest)[len] = ((unsigned char *)src)[len];
+		((t_uchar *)dest)[len] = ((t_uchar *)src)[len];
 	return (dest);
 }

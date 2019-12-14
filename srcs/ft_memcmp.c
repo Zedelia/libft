@@ -27,10 +27,10 @@ int		ft_memcmp(const void *s1, const void *s2, size_t len)
 	i = 0;
 	while (i < len)
 	{
-		if (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i] == 0)
+		if (((t_uchar *)s1)[i] - ((t_uchar *)s2)[i] == 0)
 			i++;
 		else
-			return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
+			return (((t_uchar *)s1)[i] - ((t_uchar *)s2)[i]);
 	}
 	return (0);
 }

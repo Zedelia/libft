@@ -6,7 +6,7 @@
 /*   By: mbos <marvin@le-101.fr>                    +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/11 16:06:31 by mbos         #+#   ##    ##    #+#       */
-/*   Updated: 2019/12/11 20:08:48 by melodiebos  ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/12/11 21:19:46 by melodiebos  ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -21,6 +21,9 @@
 # include <string.h>
 # include <ctype.h>
 # include <limits.h>
+
+typedef unsigned long long	t_uintmax;
+typedef unsigned char		t_uchar;
 
 typedef struct	s_list
 {
@@ -102,7 +105,7 @@ void			ft_putstr_fd(char *s, int fd);
 int				ft_atoi(const char *str);
 char			*ft_itoa(int n);
 char			*ft_utoa(unsigned int nbr);
-char			*ft_ltoabase(unsigned long long nbr, const char *base);
+char			*ft_ltoabase(t_uintmax nbr, const char *base);
 /*
 ** ---------------------------------- FT
 ** ---------------------------------- LIST

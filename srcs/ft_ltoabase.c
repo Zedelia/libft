@@ -13,7 +13,7 @@
 
 #include "../includes/libft.h"
 
-static size_t	count_digit(unsigned long long nbr, int base)
+static size_t	count_digit(t_uintmax nbr, int base)
 {
 	int count;
 
@@ -28,7 +28,7 @@ static size_t	count_digit(unsigned long long nbr, int base)
 	return (count);
 }
 
-char			*ft_ltoabase(unsigned long long nbr, const char *base)
+char			*ft_ltoabase(t_uintmax nbr, const char *base)
 {
 	int		base_len;
 	char	*itoa_str;

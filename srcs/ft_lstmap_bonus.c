@@ -6,7 +6,7 @@
 /*   By: mbos <mbos@student.le-101.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/22 11:36:47 by mbos         #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/08 18:31:38 by mbos        ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/12/18 16:24:58 by mbos        ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,7 +15,7 @@
 
 /*
 ** Itère sur la liste lst et applique la fonction f aucontenu de chaque élément.
-** Crée une nouvelle liste résultant des applications successives de f. 
+** Crée une nouvelle liste résultant des applications successives de f.
 ** La fonction del est la pour detruire le contenu d unelement si necessaire
 */
 

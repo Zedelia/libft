@@ -6,7 +6,7 @@
 /*   By: mbos <mbos@student.le-101.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/10 09:29:00 by mbos         #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/08 18:20:50 by mbos        ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/12/18 16:23:02 by mbos        ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -14,7 +14,7 @@
 #include "../includes/libft.h"
 
 /*
-** Alloue (avec malloc(3)) et retourne un tableaude chaines de caracteres 
+** Alloue (avec malloc(3)) et retourne un tableaude chaines de caracteres
 ** obtenu en séparant s à l’aide du caractère c, utilisé comme délimiteur.
 ** Le tableau doit être terminé par NULL.
 */

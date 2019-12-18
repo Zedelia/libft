@@ -6,7 +6,7 @@
 /*   By: mbos <mbos@student.le-101.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/14 10:34:53 by mbos         #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/08 18:23:25 by mbos        ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/12/18 16:25:09 by mbos        ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -14,7 +14,7 @@
 #include "../includes/libft.h"
 
 /*
-** Alloue (avec malloc(3)) et retourne une chaine decaractères représentant 
+** Alloue (avec malloc(3)) et retourne une chaine decaractères représentant
 ** l’integer reçu en argument.Les nombres négatifs doivent être gérés.
 */
 

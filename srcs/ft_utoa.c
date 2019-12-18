@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   utoa.c                                           .::    .:/ .      .::   */
+/*   ft_utoa.c                                        .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: melodieb <marvin@le-101.fr>                +:+   +:    +:    +:+     */
+/*   By: mbos <mbos@student.le-101.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/12/11 14:52:15 by melodieb     #+#   ##    ##    #+#       */
-/*   Updated: 2019/12/11 14:52:27 by mbos        ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/12/18 16:24:13 by mbos        ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-size_t		ft_unbrlen(t_uintmax nbr)
+size_t	ft_unbrlen(t_uintmax nbr)
 {
 	t_uintmax	dividor;
-	int					len;
+	int			len;
 
 	dividor = ULONG_MAX - 8446744073709551615;
 	if (nbr / dividor)

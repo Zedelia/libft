@@ -6,7 +6,7 @@
 /*   By: mbos <mbos@student.le-101.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/12 14:44:20 by mbos         #+#   ##    ##    #+#       */
-/*   Updated: 2019/11/08 18:26:38 by mbos        ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/12/18 16:24:58 by mbos        ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -15,7 +15,7 @@
 
 /*
 ** Alloue (avec malloc(3)) et renvoie un nouvelélément.
-** La variable content est initialisée àl’aide de la valeur du paramètre 
+** La variable content est initialisée àl’aide de la valeur du paramètre
 ** content. Lavariable next est initialisée à NULL.
 */
 

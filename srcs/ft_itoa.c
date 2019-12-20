@@ -6,7 +6,7 @@
 /*   By: mbos <mbos@student.le-101.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/14 10:34:53 by mbos         #+#   ##    ##    #+#       */
-/*   Updated: 2019/12/18 16:25:09 by mbos        ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/12/20 19:39:51 by mbos        ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -64,10 +64,19 @@ char			*ft_itoa(int n)
 
 	lln = n;
 	len = nb_str_len(lln);
-	if (lln < 0)
-		len = len + 1;
-	if (!(str = malloc(sizeof(char) * (len + 1))))
-		return (NULL);
-	str = fill_str(str, lln, len);
+	if (n == 0)
+	{
+		if (!(str = malloc(sizeof(char) * 2)))
+			return (NULL);
+		str = "0";
+	}
+	else 
+	{
+		if (lln < 0)
+			len = len + 1;
+		if (!(str = ft_calloc((len + 1), sizeof(char))))
+			return (NULL);
+		str = fill_str(str, lln, len);
+	}
 	return (str);
 }

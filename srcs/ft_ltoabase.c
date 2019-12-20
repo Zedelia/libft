@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   ft_ltoabase.c                                    .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: melodieb <marvin@le-101.fr>                +:+   +:    +:    +:+     */
+/*   By: mbos <mbos@student.le-101.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/12/11 19:55:17 by melodieb     #+#   ##    ##    #+#       */
-/*   Updated: 2019/12/11 20:03:28 by mbos        ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/12/20 19:30:14 by mbos        ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -38,7 +38,7 @@ char			*ft_ltoabase(t_uintmax nbr, const char *base)
 		return (ft_strsub(base, 0, 1));
 	base_len = ft_strlen(base);
 	nbr_char = count_digit(nbr, base_len);
-	itoa_str = malloc(sizeof(char) * (nbr_char + 1));
+	itoa_str = ft_calloc(nbr_char + 1, sizeof(char));
 	itoa_str = (char*)ft_memset((void*)itoa_str, '\0', (size_t)nbr_char);
 	itoa_str[nbr_char--] = '\0';
 	while (nbr)

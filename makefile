@@ -104,6 +104,16 @@ OBJ := ${SRCS:.c=.o}
 SRCS_BONUS := $(patsubst %,srcs/%.c,${SRCS_BONUS})
 OBJ_BONUS := ${SRCS:.c=.o} ${SRCS_BONUS:.c=.o}
 
+GREY = \x1b[30m
+RED = \x1b[31m
+GREEN = \x1b[32m
+YELLOW = \x1b[33m
+BLUE = \x1b[34m
+PURPLE = \x1b[35m
+CYAN = \x1b[36m
+WHITE = \x1b[37m
+END = \x1b[0m
+ERASE = \033[2K\r
 
 NAME_BONUS = libft_bonus
 
@@ -150,11 +160,13 @@ progs: ${NAME_STR} ${NAME_LIST} ${NAME_BASE} ${NAME_MEMORY} ${NAME_PRINT} ${NAME
 	$(CC) $(CFLAGS) -I $(INCLUDES)  -c  -o $@ $<
 
 clean:
-	rm -f ${OBJ_BONUS}
+	@rm -f ${OBJ_BONUS}
+	@printf "$(BLUE)> Deleted : $(RED)libft .obj$(END)\n"
 
 fclean: clean
-	rm -f ${NAME_MEM} ${NAME_ISTYPE} ${NAME_STR} ${NAME_LIST} ${NAME_BASE} ${NAME_MEMORY} ${NAME_PRINT}
-	rm -f ${NAME}
+	@rm -f ${NAME_MEM} ${NAME_ISTYPE} ${NAME_STR} ${NAME_LIST} ${NAME_BASE} ${NAME_MEMORY} ${NAME_PRINT}
+	@printf "$(BLUE)> Deleted : $(RED)${NAME}$(END)\n"		
+	@rm -f ${NAME}
 
 norm:
 	norminette -R CheckForbiddenSourceHeader ${SRCS} ${SRCS_BONUS}

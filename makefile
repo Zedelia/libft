@@ -122,15 +122,15 @@ ${NAME}: ${OBJ}
 		ranlib ${NAME}
 
 ${NAME_BONUS}:${OBJ_BONUS}
-		ar rc ${NAME} ${OBJ_BONUS}
-		ranlib ${NAME}
+		@ar rc ${NAME} ${OBJ_BONUS}
+		@ranlib ${NAME}
+		@echo "$(ERASE)$(GREEN)[SUCCESS] libft.a$(END)"
 
 all : ${NAME}
-		@echo "$(OK_COLOR)\n>> La librairie Libft.a a bien ete cree.\n$(NO_COLOR)"
+		@echo "$(GREEN)\n>> La librairie Libft.a a bien ete cree.\n$(END)"
 
 bonus: ${NAME_BONUS}
-		@echo "$(_PURPLE)\n>> La librairie Libft.a a bien ete mise a jour\n$(NO_COLOR)"
-
+		@printf "$(ERASE)$(BLUE)> Compilation :$(END)$(PURPLE) $<$(END)"
 
 ${NAME_STR}:${OBJ} ${MAIN_STR}
 		${COMP} -o ${NAME_STR} ${OBJ} ${MAIN_STR}
@@ -157,15 +157,16 @@ progs: ${NAME_STR} ${NAME_LIST} ${NAME_BASE} ${NAME_MEMORY} ${NAME_PRINT} ${NAME
 	@echo "\n>> Congrats ! You're a genius ! \nLes programmes ont bien ete crees"
 
 %.o : %.c $(INCLUDES)
-	$(CC) $(CFLAGS) -I $(INCLUDES)  -c  -o $@ $<
+	@$(CC) $(CFLAGS) -I $(INCLUDES)  -c  -o $@ $<
+	@printf "$(ERASE)$(BLUE)> Compilation :$(END) $<"
 
 clean:
 	@rm -f ${OBJ_BONUS}
-	@printf "$(BLUE)> Deleted : $(RED)libft .obj$(END)\n"
+#	@printf "$(BLUE)> Deleted : $(RED)libft .obj$(END)\n"
 
 fclean: clean
 	@rm -f ${NAME_MEM} ${NAME_ISTYPE} ${NAME_STR} ${NAME_LIST} ${NAME_BASE} ${NAME_MEMORY} ${NAME_PRINT}
-	@printf "$(BLUE)> Deleted : $(RED)${NAME}$(END)\n"		
+	@printf "$(BLUE)> Deleted : $(RED)${NAME}$(END)\n"
 	@rm -f ${NAME}
 
 norm:

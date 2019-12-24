@@ -118,16 +118,16 @@ ERASE = \033[2K\r
 NAME_BONUS = libft_bonus
 
 ${NAME}: ${OBJ}
-		ar rc ${NAME} ${OBJ}
-		ranlib ${NAME}
+		@ar rc ${NAME} ${OBJ}
+		@ranlib ${NAME}
 
 ${NAME_BONUS}:${OBJ_BONUS}
 		@ar rc ${NAME} ${OBJ_BONUS}
 		@ranlib ${NAME}
 		@echo "$(ERASE)$(GREEN)[SUCCESS] libft.a$(END)"
 
-all : ${NAME}
-		@echo "$(GREEN)\n>> La librairie Libft.a a bien ete cree.\n$(END)"
+all : ${NAME_BONUS}
+		@echo "$(ERASE)$(GREEN)[SUCCESS] libft.a$(END)"
 
 bonus: ${NAME_BONUS}
 		@printf "$(ERASE)$(BLUE)> Compilation :$(END)$(PURPLE) $<$(END)"
@@ -162,7 +162,7 @@ progs: ${NAME_STR} ${NAME_LIST} ${NAME_BASE} ${NAME_MEMORY} ${NAME_PRINT} ${NAME
 
 clean:
 	@rm -f ${OBJ_BONUS}
-#	@printf "$(BLUE)> Deleted : $(RED)libft .obj$(END)\n"
+	@printf "$(BLUE)> Deleted : $(RED)libft .obj$(END)\n"
 
 fclean: clean
 	@rm -f ${NAME_MEM} ${NAME_ISTYPE} ${NAME_STR} ${NAME_LIST} ${NAME_BASE} ${NAME_MEMORY} ${NAME_PRINT}

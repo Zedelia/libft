@@ -3,10 +3,10 @@
 /*                                                              /             */
 /*   get_next_line.h                                  .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: mbos <mbos@student.le-101.fr>              +:+   +:    +:    +:+     */
+/*   By: melodiebos <melodiebos@student.le-101.f    +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/29 09:46:01 by mbos         #+#   ##    ##    #+#       */
-/*   Updated: 2019/12/24 12:50:25 by mbos        ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/12/26 12:52:06 by melodiebos  ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -22,9 +22,11 @@
 # include <sys/types.h>
 # include <stdio.h>
 
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 8
-# endif
+/*
+** # ifndef BUFFER_SIZE
+** #  define BUFFER_SIZE 8
+** # endif
+*/
 
 typedef enum			e_result
 {

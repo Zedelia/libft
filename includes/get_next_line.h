@@ -6,7 +6,7 @@
 /*   By: mbos <mbos@student.le-101.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/29 09:46:01 by mbos         #+#   ##    ##    #+#       */
-/*   Updated: 2019/12/26 14:24:01 by mbos        ###    #+. /#+    ###.fr     */
+/*   Updated: 2019/12/26 20:48:44 by mbos        ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -21,12 +21,12 @@
 # include <fcntl.h>
 # include <sys/types.h>
 # include <stdio.h>
+# include "libft.h"
 
-/*
-** # ifndef BUFFER_SIZE
-** #  define BUFFER_SIZE 8
-** # endif
-*/
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 8
+# endif
+
 
 typedef enum			e_result
 {

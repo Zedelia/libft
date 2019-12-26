@@ -70,7 +70,9 @@ SRCS = ft_atoi \
 	ft_ltoabase \
 	ft_strsub \
 	ft_strncpy \
-	ft_strspn
+	ft_strspn \
+	get_next_line_utils \
+	get_next_line
 
 SRCS_BONUS = ft_lstnew_bonus \
 	ft_lstadd_front_bonus \
@@ -122,7 +124,7 @@ ${NAME}: ${OBJ}
 		@ranlib ${NAME}
 
 ${NAME_BONUS}:${OBJ_BONUS}
-		@ar rc ${NAME} ${OBJ_BONUS}
+		@ar rcs ${NAME} ${OBJ_BONUS}
 		@ranlib ${NAME}
 		@echo "$(ERASE)$(GREEN)[SUCCESS] libft.a$(END)"
 

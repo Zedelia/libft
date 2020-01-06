@@ -74,7 +74,8 @@ SRCS = ft_atoi \
 	ft_floor \
 	ft_fmod \
 	get_next_line_utils \
-	get_next_line
+	get_next_line \
+	ft_remainder
 
 SRCS_BONUS = ft_lstnew_bonus \
 	ft_lstadd_front_bonus \

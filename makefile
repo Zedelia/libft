@@ -71,6 +71,8 @@ SRCS = ft_atoi \
 	ft_strsub \
 	ft_strncpy \
 	ft_strspn \
+	ft_floor \
+	ft_fmod \
 	get_next_line_utils \
 	get_next_line
 

@@ -6,7 +6,7 @@
 /*   By: mbos <mbos@student.le-101.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/11 16:06:31 by mbos         #+#   ##    ##    #+#       */
-/*   Updated: 2019/12/26 17:40:35 by mbos        ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/01/06 13:39:16 by mbos        ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -107,6 +107,8 @@ int				ft_atoi(const char *str);
 char			*ft_itoa(int n);
 char			*ft_utoa(unsigned int nbr);
 char			*ft_ltoabase(t_uintmax nbr, const char *base);
+long long		ft_floor(long double nb);
+long double		ft_fmod(long double nb, long double mod);
 /*
 ** ---------------------------------- FT
 ** ---------------------------------- LIST

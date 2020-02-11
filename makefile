@@ -52,6 +52,7 @@ SRCS = ft_atoi \
 	ft_strlen \
 	ft_strmapi \
 	ft_strncmp \
+	ft_strcmp \
 	ft_strnstr \
 	ft_strrchr \
 	ft_strtrim \
@@ -75,7 +76,8 @@ SRCS = ft_atoi \
 	ft_fmod \
 	get_next_line_utils \
 	get_next_line \
-	ft_remainder
+	ft_remainder \
+	ft_abs
 
 SRCS_BONUS = ft_lstnew_bonus \
 	ft_lstadd_front_bonus \

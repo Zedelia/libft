@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_abs.c                                         .::    .:/ .      .::   */
+/*   ft_strcmp.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: mbos <mbos@student.le-101.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2020/01/20 13:07:44 by mbos         #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/20 13:18:59 by mbos        ###    #+. /#+    ###.fr     */
+/*   Created: 2020/02/11 15:00:09 by mbos         #+#   ##    ##    #+#       */
+/*   Updated: 2020/02/11 15:01:17 by mbos        ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+/*
+** The strcmp() and strncmp() functions lexicographically compare the
+** null-terminated strings s1 and s2.
+*/
 
-double		ft_abs(double nb)
+int		ft_strcmp(const char *s1, const char *s2)
 {
-	if (nb < 0)
-		return (nb = -nb);
-	else
-		return (nb);
+	int	i;
+
+	i = 0;
+	while (s1[i] && s2[i] && s1[i] == s2[i])
+		++i;
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }

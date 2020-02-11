@@ -6,7 +6,7 @@
 /*   By: mbos <mbos@student.le-101.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2019/10/11 16:06:31 by mbos         #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/20 13:09:21 by mbos        ###    #+. /#+    ###.fr     */
+/*   Updated: 2020/02/11 15:01:34 by mbos        ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -87,6 +87,7 @@ int				ft_isincharset(char c, char const *charset);
 size_t			ft_strspn(const char *s, const char *charset);
 char			*ft_strsub(char const *s, unsigned int start, size_t len);
 char			*ft_strncpy(char *dest, const char *src, size_t n);
+int				ft_strcmp(const char *s1, const char *s2);
 /*
 ** ---------------------------------- FT
 ** ---------------------------------- PUT
@@ -110,7 +111,7 @@ char			*ft_ltoabase(t_uintmax nbr, const char *base);
 long long		ft_floor(float nb);
 float			ft_fmod(float nb, float mod);
 float			ft_remainder(float numerator, float denominator);
-int				ft_abs(int nb);
+double				ft_abs(double nb);
 /*
 ** ---------------------------------- FT
 ** ---------------------------------- LIST

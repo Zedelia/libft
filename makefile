@@ -52,6 +52,7 @@ SRCS = ft_atoi \
 	ft_strlen \
 	ft_strmapi \
 	ft_strncmp \
+	ft_strcmp \
 	ft_strnstr \
 	ft_strrchr \
 	ft_strtrim \
@@ -70,7 +71,13 @@ SRCS = ft_atoi \
 	ft_ltoabase \
 	ft_strsub \
 	ft_strncpy \
-	ft_strspn
+	ft_strspn \
+	ft_floor \
+	ft_fmod \
+	get_next_line_utils \
+	get_next_line \
+	ft_remainder \
+	ft_abs
 
 SRCS_BONUS = ft_lstnew_bonus \
 	ft_lstadd_front_bonus \
@@ -104,23 +111,33 @@ OBJ := ${SRCS:.c=.o}
 SRCS_BONUS := $(patsubst %,srcs/%.c,${SRCS_BONUS})
 OBJ_BONUS := ${SRCS:.c=.o} ${SRCS_BONUS:.c=.o}
 
+GREY = \x1b[30m
+RED = \x1b[31m
+GREEN = \x1b[32m
+YELLOW = \x1b[33m
+BLUE = \x1b[34m
+PURPLE = \x1b[35m
+CYAN = \x1b[36m
+WHITE = \x1b[37m
+END = \x1b[0m
+ERASE = \033[2K\r
 
 NAME_BONUS = libft_bonus
 
 ${NAME}: ${OBJ}
-		ar rc ${NAME} ${OBJ}
-		ranlib ${NAME}
+		@ar rc ${NAME} ${OBJ}
+		@ranlib ${NAME}
 
 ${NAME_BONUS}:${OBJ_BONUS}
-		ar rc ${NAME} ${OBJ_BONUS}
-		ranlib ${NAME}
+		@ar rcs ${NAME} ${OBJ_BONUS}
+		@ranlib ${NAME}
+		@echo "$(ERASE)$(GREEN)[SUCCESS] libft.a$(END)"
 
-all : ${NAME}
-		@echo "$(OK_COLOR)\n>> La librairie Libft.a a bien ete cree.\n$(NO_COLOR)"
+all : ${NAME_BONUS}
+		@echo "$(ERASE)$(GREEN)[SUCCESS] libft.a$(END)"
 
 bonus: ${NAME_BONUS}
-		@echo "$(_PURPLE)\n>> La librairie Libft.a a bien ete mise a jour\n$(NO_COLOR)"
-
+		@printf "$(ERASE)$(BLUE)> Compilation :$(END)$(PURPLE) $<$(END)"
 
 ${NAME_STR}:${OBJ} ${MAIN_STR}
 		${COMP} -o ${NAME_STR} ${OBJ} ${MAIN_STR}
@@ -147,14 +164,17 @@ progs: ${NAME_STR} ${NAME_LIST} ${NAME_BASE} ${NAME_MEMORY} ${NAME_PRINT} ${NAME
 	@echo "\n>> Congrats ! You're a genius ! \nLes programmes ont bien ete crees"
 
 %.o : %.c $(INCLUDES)
-	$(CC) $(CFLAGS) -I $(INCLUDES)  -c  -o $@ $<
+	@$(CC) $(CFLAGS) -I $(INCLUDES)  -c  -o $@ $<
+	@printf "$(ERASE)$(BLUE)> Compilation :$(END) $<"
 
 clean:
-	rm -f ${OBJ_BONUS}
+	@rm -f ${OBJ_BONUS}
+	@printf "$(BLUE)> Deleted : $(RED)libft .obj$(END)\n"
 
 fclean: clean
-	rm -f ${NAME_MEM} ${NAME_ISTYPE} ${NAME_STR} ${NAME_LIST} ${NAME_BASE} ${NAME_MEMORY} ${NAME_PRINT}
-	rm -f ${NAME}
+	@rm -f ${NAME_MEM} ${NAME_ISTYPE} ${NAME_STR} ${NAME_LIST} ${NAME_BASE} ${NAME_MEMORY} ${NAME_PRINT}
+	@printf "$(BLUE)> Deleted : $(RED)${NAME}$(END)\n"
+	@rm -f ${NAME}
 
 norm:
 	norminette -R CheckForbiddenSourceHeader ${SRCS} ${SRCS_BONUS}

@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_isalnum.c                                     .::    .:/ .      .::   */
+/*   ft_floor.c                                       .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: mbos <mbos@student.le-101.fr>              +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/08 10:53:00 by mbos         #+#   ##    ##    #+#       */
-/*   Updated: 2020/01/06 15:13:15 by mbos        ###    #+. /#+    ###.fr     */
+/*   Created: 2020/01/06 13:34:20 by mbos         #+#   ##    ##    #+#       */
+/*   Updated: 2020/01/06 16:52:04 by mbos        ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-/*
-** The isalnum() function tests for any character for which isalpha(3)
-** or isdigit(3) is true.  The value of the argument must be
-** representable as an t_uchar or the value of EOF.
-*/
-
-int		ft_isalnum(int c)
+long long		ft_floor(float nb)
 {
-	if (((c >= '0' && c <= '9')) ||
-		((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')))
-		return (1);
-	return (0);
+	long long	nbi;
+
+	nbi = (long long)nb;
+	return (nb < nbi ? nbi - 1 : nbi);
 }

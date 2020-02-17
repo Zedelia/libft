@@ -1,14 +1,13 @@
 /* ************************************************************************** */
-/*                                                          LE - /            */
-/*                                                              /             */
-/*   libft.h                                          .::    .:/ .      .::   */
-/*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: mbos <mbos@student.le-101.fr>              +:+   +:    +:    +:+     */
-/*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2019/10/11 16:06:31 by mbos         #+#   ##    ##    #+#       */
-/*   Updated: 2020/02/11 15:01:34 by mbos        ###    #+. /#+    ###.fr     */
-/*                                                         /                  */
-/*                                                        /                   */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mbos <mbos@student.le-101.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/02/17 13:07:49 by mbos              #+#    #+#             */
+/*   Updated: 2020/02/17 13:11:12 by mbos             ###   ########lyon.fr   */
+/*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
@@ -111,7 +110,7 @@ char			*ft_ltoabase(t_uintmax nbr, const char *base);
 long long		ft_floor(float nb);
 float			ft_fmod(float nb, float mod);
 float			ft_remainder(float numerator, float denominator);
-double				ft_abs(double nb);
+double			ft_abs(double nb);
 /*
 ** ---------------------------------- FT
 ** ---------------------------------- LIST
